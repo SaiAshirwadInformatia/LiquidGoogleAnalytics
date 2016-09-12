@@ -3,7 +3,7 @@ before_script:
   - gem install jekyll
   - gem install bundler
   - bundle install --path=.bundler-cache
-stage:
+stages:
   - test
 cache:
   paths:
