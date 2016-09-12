@@ -2,7 +2,7 @@
 require 'minitest/autorun'
 require 'google_analytics_tag'
 
-class GoogleAnalyticsTest < Minitest::Test
+class GoogleAnalyticsTest <  Minitest::Unit::TestCase
 	def test_google_analytics
 		template_gen = Liquid::Template.parse('{% google_analytics U-412 %}')
 		expected = <<-EOF
