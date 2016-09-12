@@ -1,0 +1,15 @@
+image: ruby:2.1
+before_script:
+  - gem install jekyll
+  - gem install bundler
+  - bundle install --path=.bundler-cache
+stage:
+  - test
+cache:
+  paths:
+    - .bundler-cache
+
+test:
+  stage: test
+  script:
+  - rake test
