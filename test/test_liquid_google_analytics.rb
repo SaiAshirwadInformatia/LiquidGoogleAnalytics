@@ -17,6 +17,7 @@ class GoogleAnalyticsTest <  Minitest::Unit::TestCase
 
 </script>
 		EOF
+		
 		assert_equal expected, template_gen.render
 	end
 end

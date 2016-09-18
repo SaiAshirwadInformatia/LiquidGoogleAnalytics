@@ -16,7 +16,7 @@ module Liquid
 
 		def initialize(tag_name, tracking_code, tokens)
 		    super
-		    @tracking_code = tracking_code.to_s
+		    @tracking_code = tracking_code.to_s.strip
 		 end
 
 		def render(context)
