@@ -41,6 +41,6 @@ Fork this repository, make your changes and then issue a pull request. If you fi
 
 ### Copyright
 
-Copyright (c) 2015 Rohan Sakhale
+Copyright (c) 2016 Rohan Sakhale
 
 License: MIT
