@@ -1,7 +1,5 @@
-# Generate script code for Google Analytics with Liquid Tag
-require 'liquid'
 
-module LiquidTags
+module Liquid
 	class GoogleAnalytics < Liquid::Tag
 		TEMPLATE = <<-EOF
 <script>
@@ -22,12 +20,11 @@ module LiquidTags
 		 end
 
 		def render(context)
-			if context['tracking_code']
-				format(TEMPLATE, context['tracking_code'])
-			elseif @tracking_code
-				format(TEMPLATE, @tracking_code)
+			code = ""
+			if @tracking_code
+				code = format(TEMPLATE, @tracking_code)
 			end
+			code
 		end
 	end
-	Liquid::Template.register_tag 'google_analytics', GoogleAnalytics
 end
