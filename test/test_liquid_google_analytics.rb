@@ -1,6 +1,6 @@
 # Test Google Analytics Tag
 require 'minitest/autorun'
-require 'google_analytics_tag'
+require 'liquid-google-analytics'
 
 class GoogleAnalyticsTest <  Minitest::Unit::TestCase
 	def test_google_analytics

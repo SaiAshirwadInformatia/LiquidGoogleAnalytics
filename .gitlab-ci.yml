@@ -1,6 +1,5 @@
 image: ruby:2.1
 before_script:
-  - gem install jekyll
   - gem install bundler
   - bundle install --path=.bundler-cache
 stages:
