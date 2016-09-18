@@ -1,4 +1,4 @@
-# Liquid Google Analytics Tag
+# Liquid Google Analytics Tag [![Gem Version](https://badge.fury.io/rb/liquid-google-analytics.svg)](https://badge.fury.io/rb/liquid-google-analytics)
 
 This plugin helps generate Google Analytics code snippet easily as a Liquid Tag call
 
