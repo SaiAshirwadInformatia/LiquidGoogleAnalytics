@@ -13,7 +13,7 @@ cache:
 test:
   stage: test
   script:
-  - rake test
+  - bundle exec rake test
 
 pages:
   stage: deploy
