@@ -24,6 +24,7 @@ pages:
     - bundle exec jekyll build -d public
     - cd ..
     - mv pages/public public
+    - bundle exec rake test
     - mv coverage public/coverage_report
   artifacts:
     paths:
