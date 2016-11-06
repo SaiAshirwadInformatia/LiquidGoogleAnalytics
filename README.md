@@ -1,6 +1,6 @@
-# Liquid Google Analytics Tag [![Gem Version](https://badge.fury.io/rb/liquid-google-analytics.svg)](https://badge.fury.io/rb/liquid-google-analytics)
+# Liquid Google Analytics Tag [![build status](https://gitlab.com/SaiAshirwadInformatia/LiquidGoogleAnalytics/badges/master/build.svg)](https://gitlab.com/SaiAshirwadInformatia/LiquidGoogleAnalytics/commits/master) [![Gem Version](https://badge.fury.io/rb/liquid-google-analytics.svg)](https://badge.fury.io/rb/liquid-google-analytics) [![coverage report](https://gitlab.com/SaiAshirwadInformatia/LiquidGoogleAnalytics/badges/master/coverage.svg)](https://gitlab.com/SaiAshirwadInformatia/LiquidGoogleAnalytics/commits/master)
 
-This plugin helps generate Google Analytics code snippet easily as a Liquid Tag call
+This plugin helps generate Google Analytics code snippet easily with the help of Liquid Tag or Liquid Variable Filter
 
 ### Installation
 
@@ -32,15 +32,29 @@ gems:
 You need to use `google_analytics` as liquid tag and pass the Tracking Code as parameter shown below
 
 ```
-{{ google_analytics UA-12345 }}
+{% google_analytics UA-12345 %}
+```
+
+### Alternate
+
+Optionally now you can also maintain Google Analytics code in config and use filter for variable as below
+
+```yaml
+ga_code: UA-12345
+```
+
+```
+{{ site.ga_code | google_analytics }}
 ```
 
 ### Contribute
 
-Fork this repository, make your changes and then issue a pull request. If you find bugs or have new ideas that you do not want to implement yourself, file a bug report.
+Fork this repository, create your branch, make changes and then issue a pull request.
+
+If you find bugs or have new ideas that you do not want to implement yourself, file a bug report.
 
 ### Copyright
 
 Copyright (c) 2016 Rohan Sakhale
 
-License: MIT
+License: [MIT](LICENSE.md)

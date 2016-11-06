@@ -23,8 +23,9 @@ Gem::Specification.new do |spec|
     raise 'RubyGems 2.0 or newer is required to protect against public gem push.'
   end
 
-  spec.add_dependency 'jekyll', '~> 3.2'
+  spec.add_dependency 'jekyll', '~> 3.3.0'
   spec.add_development_dependency 'bundler', '~> 1.10'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'minitest', '~> 5.9.0'
+  spec.add_development_dependency 'simplecov', '~> 0.12.0'
 end

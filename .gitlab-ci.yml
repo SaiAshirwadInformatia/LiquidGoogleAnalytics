@@ -1,9 +1,11 @@
-image: ruby:2.1
+image: saiashirwadinformatia/jekyll-bower:v1
 before_script:
   - gem install bundler
   - bundle install --path=.bundler-cache
+
 stages:
   - test
+  - deploy
 cache:
   paths:
     - .bundler-cache
@@ -12,3 +14,36 @@ test:
   stage: test
   script:
   - rake test
+
+pages:
+  stage:
+    - deploy
+  dependencies:
+    - test
+  script:
+    - cd pages
+    - bundle install --path=.bundler-cache
+    - bundle exec jekyll build -d public
+    - cd ..
+    - mv pages/public public
+    - mv coverage public/coverage_report
+  artifacts:
+    path:
+      - public
+  only:
+    - master
+
+publish:
+  stage:
+    - deploy
+  dependencies:
+    - test
+  script:
+    - chmod +x prepare-publish.sh
+    - echo "Generating API credentials file"
+    - sh prepare-publish.sh $GEMS_API_KEY
+    - gem build liquid-google-analytics.gemspec
+    - gem push liquid-google-analytics-*.gem
+    - echo "Gem published successfully"
+  only:
+    - tags

@@ -1,0 +1,30 @@
+---
+---
+<!doctype html>
+<html>
+	<head>
+		{% include head.html %}
+	</head>
+	<body>
+		{% include header.html %}
+		<div class="container">
+			<div class="row row-offcanvas row-offcanvas-right">
+				<div class="col-sm-9">
+					<p class="pull-right visible-xs">
+						<button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">
+							Toggle nav
+						</button>
+					</p>
+					<div class="jumbotron">
+						<h1>{{ site.title }}</h1>
+						<p>
+							{{ site.description }}
+						</p>
+					</div>
+					{{ content }}
+				</div>
+				{% include sidebar.html %}
+			</div>
+		</div>
+	</body>
+</html>

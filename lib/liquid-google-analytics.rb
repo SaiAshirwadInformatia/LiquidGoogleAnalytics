@@ -2,4 +2,5 @@
 require 'liquid'
 require 'liquid/google_analytics'
 
-Liquid::Template.register_tag 'google_analytics', Liquid::GoogleAnalytics
+Liquid::Template.register_tag 'google_analytics', Liquid::GoogleAnalyticsTag
+Liquid::Template.register_filter(GoogleAnalyticsFilterModule)
