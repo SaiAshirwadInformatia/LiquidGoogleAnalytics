@@ -1,6 +1,5 @@
 image: saiashirwadinformatia/jekyll-bower:v1
 before_script:
-  - gem install bundler
   - bundle install --path=.bundler-cache
 
 stages:
