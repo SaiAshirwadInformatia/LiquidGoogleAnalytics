@@ -16,8 +16,7 @@ test:
   - rake test
 
 pages:
-  stage:
-    - deploy
+  stage: deploy
   dependencies:
     - test
   script:
@@ -28,14 +27,13 @@ pages:
     - mv pages/public public
     - mv coverage public/coverage_report
   artifacts:
-    path:
+    paths:
       - public
   only:
     - master
 
 publish:
-  stage:
-    - deploy
+  stage: deploy
   dependencies:
     - test
   script:
